@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div id="header">
+       <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hello, I'm <span>Abhinay</span><br> From BVRIT</h1>
+            </div>
+       </div> 
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg">
+                </div>
+                
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I specialize in creating responsive, user-friendly, and visually appealing web applications using technologies like HTML, 
+                        CSS, JavaScript, and modern frameworks like Tailwind CSS. I have a good command of programming languages such as 
+                        Python, Java, and C, which I use to create innovative solutions and develop new projects.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('certificates')">Certificates</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span></span><br>Java</li>
+                            <li><span></span><br>CSS/HTML</li>
+                            <li><span></span><br>javascript</li>   
+                            <li><span></span><br>Python</li>      
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="certificates">
+                        <ul>
+                            <li><span>Jan 2025</span><br>Introduction to Data Science course , CISCO</li>
+                            <li><span>Jan 2025</span><br>GenAI Job Simulation, Forage</li>
+                            <li><span>Oct 2024</span><br>Soft Skills, NPTEL</li>     
+                            <li><span>Sep 2024</span><br>Prompt Design in Vextex AI, Google Cloud</li>     
+                            <li><span>Aug  2024</span><br>Python for Data Science, COGNITIVE CLASS.ai</li>     
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022</span><br>Completed intermediate in MPC</li>
+                            <li><span>2024</span><br>Learning advanced web technologies</li>
+                            <li><span>2025</span><br>Graduating in B.Tech CSM</li>     
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----portfolio--------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.jpg">
+                    <div class="layer">
+                        <h3>Social Media</h3>
+                        <p>the app connects you to the talented pepole around the world 
+                            download it from playstore </p>
+                            <a href ="#"><i class ="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.jpeg">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>the app connects you to the talented pepole around the world 
+                            download it from playstore </p>
+                            <a href ="#"><i class ="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+              <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+    <!-------------------contact------->
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Get in touch</h1>
+                    <p><i class="fas fa-envelope"></i> abhinayganavena116@gmail.com</p>
+                    <p><i class="fas fa-phone-alt"></i> 9392651266</p>
+                    <div class="social-icons">
+                        <a href="https://x.com/AGanavena81519?t=vblXuUgdzYr2AqKUYeoWYg&s=08"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/abhinayganavena"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/abhinay-ganavena-4a4248259/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/Abhinay resume.pdf" download class = "btn btn2">Download Cv</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+
+                        <input type="text" name ="Name" placeholder ="Your Name" requried>
+                        <input type="email" name ="email" placeholder ="Your Email" requried>
+                         <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                     <button type ="submit" class="btn btn2">submit</button>
+                        </form>
+                        <span id ="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright @ Abhinay made <i class="fa-solid fa-heart"></i>with by easy Tutaorials</p>
+        </div>
+    </div>
+
+    <!-- JavaScript for Tab Switching -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){ 
+            for(let tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(let tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }  
+    </script>
+
+</body>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx5n0iQfi4AiqVmX6HHBTpwI7bRe_zaIisRkt4f_Hw5JsbBRXSdgXsJEoK5aSBPvtzQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg =  document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+              
+            msg.innerHTML = "Message sent successfully"
+              setTimeout(function(){
+                msg.innerHTML =""
+              },5000)
+              form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</html>
